@@ -1,0 +1,25 @@
+{
+  "name": "@micro-dca/contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for Micro-DCA Vault on Somnia",
+  "main": "index.js",
+  "scripts": {
+    "build": "hardhat compile",
+    "test": "forge test",
+    "test:gas": "forge test --gas-report",
+    "deploy": "hardhat run script/Deploy.s.sol",
+    "deploy:somnia": "hardhat run script/Deploy.s.sol --network somnia",
+    "verify": "hardhat verify"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-foundry": "^1.1.1",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^5.0.1",
+    "@types/node": "^20.10.6",
+    "hardhat": "^2.19.4",
+    "typescript": "^5.3.3"
+  },
+  "keywords": ["defi", "dca", "erc4626", "somnia", "vault"],
+  "author": "Micro-DCA Team",
+  "license": "MIT"
+}
