@@ -1,0 +1,39 @@
+{
+  "name": "micro-dca-vault",
+  "version": "1.0.0",
+  "description": "Micro-DCA Vault - Automated dollar-cost averaging on Somnia",
+  "main": "index.js",
+  "workspaces": [
+    "contracts",
+    "app"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm run install:contracts && npm run install:app",
+    "install:contracts": "cd contracts && npm install",
+    "install:app": "cd app && npm install",
+    "build": "npm run build:contracts && npm run build:app",
+    "build:contracts": "cd contracts && npm run build",
+    "build:app": "cd app && npm run build",
+    "test": "cd contracts && npm run test",
+    "dev": "cd app && npm run dev",
+    "deploy": "cd contracts && npm run deploy",
+    "clean": "rm -rf node_modules contracts/node_modules app/node_modules contracts/out contracts/cache app/.next"
+  },
+  "keywords": [
+    "defi",
+    "dca",
+    "somnia",
+    "erc4626",
+    "vault",
+    "automated-trading"
+  ],
+  "author": "Micro-DCA Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
